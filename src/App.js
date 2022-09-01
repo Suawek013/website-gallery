@@ -8,12 +8,22 @@ import SimpleImageSlider from "react-simple-image-slider";
 
 export default function App(){
 
+	const descriptions = [
+	"Hello, my name is Sławomir Sojka 👨‍🎓, I come from Poland 🇵🇱 , and I am a Student in Szybinski's Secondary School, with specialization in Programming 💻",
+	"In the start of the first week we had workshops ✍🏻 about the soft skills as well as how to introduce ourselves durign the job interview 💼 . Later in the week we've started the HTML/CSS course, after which we were developing website application 🔧 ",
+	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum.",
+	"On Sunday, after the morning lessons, we went on a trip to Leipzig, were we had a guided tour. We walked and saw the Market Square, the Old City Hall, as well as the Augusteum and the Church of St. Nicolas.",
+	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum.",
+	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum."
+	]
+
+	const [description, setDescription] = useState(0)
 	const [images, setImages] = useState([{ url: "images/unsamples/1.jpg" },
 		{ url: "images/unsamples/2.jpg" },
 		{ url: "images/unsamples/3.jpg" },])
 
-	const switchPage = (pageName) => {
-		
+	const switchPage = (pageName,index) => {
+		setDescription(index);
 		setImages([
 			{ url: `images/${pageName}/1.jpg` },
 			{ url: `images/${pageName}/2.jpg` },
@@ -27,40 +37,45 @@ export default function App(){
 				<nav>
 					<ul>
 						<li>
-							<Button onClick={()=>switchPage("home")} className="button-shadow" size="lg" variant="primary">Home</Button>{' '}
+							<Button onClick={()=>switchPage("home",0)} className="button-shadow" size="lg" variant="primary">Home</Button>{' '}
 						</li>
 						<li>
 							<DropdownButton  size="lg" id="dropdown-basic-button" title="Practice">
-								<Dropdown.Item onClick={()=>switchPage("practice/1week")}>1 Week</Dropdown.Item>
-								<Dropdown.Item onClick={()=>switchPage("practice/2week")}>2 Week</Dropdown.Item>
+								<Dropdown.Item onClick={()=>switchPage("practice/1week",1)}>1 Week</Dropdown.Item>
+								<Dropdown.Item onClick={()=>switchPage("practice/2week",2)}>2 Week</Dropdown.Item>
 							</DropdownButton>
 						</li>
 						<li>
 							<DropdownButton size="lg" id="dropdown-basic-button" title="Culture">
-								<Dropdown.Item onClick={()=>switchPage("culture/leipzig")}>Leipzig</Dropdown.Item>
-								<Dropdown.Item onClick={()=>switchPage("culture/berlin")}>Berlin</Dropdown.Item>
+								<Dropdown.Item onClick={()=>switchPage("culture/leipzig",3)}>Leipzig</Dropdown.Item>
+								<Dropdown.Item onClick={()=>switchPage("culture/berlin",4)}>Berlin</Dropdown.Item>
 							</DropdownButton>
 						</li>
 						<li>
-							<Button onClick={()=>switchPage("free_time")} className="button-shadow" size="lg" variant="primary">Free time</Button>{' '}
+							<Button onClick={()=>switchPage("free_time",5)} className="button-shadow" size="lg" variant="primary">Free time</Button>{' '}
 						</li>
 					</ul>
 				</nav>
 			</header>
 			<main>
 				<div className="image-container">
-					{/* <img src={`/images/${page}/${counter}.jpg`} alt={`img-${counter}`}></img> */}
-					<SimpleImageSlider
-						autoPlay={true}
-						width={700}
-						height={450}
-						images={images}
-						showBullets={true}
-						showNavs={true}
-					/>
+					{description == 0 && 
+						<img src={`/images/home/1.jpg`} alt={`friends`}></img>
+					}
+					{description != 0 && 
+						<SimpleImageSlider
+							className="slideshow"
+							autoPlay={true}
+							width={700}
+							height={400}
+							images={images}
+							showBullets={true}
+							showNavs={true}
+						/>
+					}
 				</div>
 				<div className="image-description">
-					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+					<p>{descriptions[description]}</p>
 				</div>
 			</main>
 			{/* <footer>Sławomir Sojka 2022</footer> */}

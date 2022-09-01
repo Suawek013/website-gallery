@@ -5,7 +5,7 @@ body {
 }
 .App {
 	padding: 0 auto;
-	margin-top: 5rem;
+	margin-top: 3.5rem;
 	text-align: center;
 	/* background-color: whitesmoke; */
 }
@@ -25,20 +25,23 @@ a {
 }
 main {
 	width: 50%;
-	height: 75vh;
+	height: 82vh;
 	margin: 0 auto;
 	background-color: whitesmoke;
-	border: 1px solid rgb(114, 114, 114);
+	border: 1px solid rgb(172, 172, 172);
 	border-radius: 30px;
 	display: grid;
 	grid-template-rows: 3fr 1fr;
+	-webkit-box-shadow: 2px 11px 26px -2px rgba(0,0,0,0.67); 
+	box-shadow: 2px 11px 26px -2px rgba(0,0,0,0.67);
 }
 
 .image-container {
 	padding-top: 3rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
 	margin: 0 auto;
 	text-align: center;
-	width: 70%;
 }
 .image-container img {
 	width: 100%;
@@ -47,9 +50,17 @@ main {
 	box-shadow: 2px 11px 26px -2px rgba(0,0,0,0.67);
 	max-height: 30rem;
 }
+.slideshow {
+	width: 100% !important;
+	border-radius: 0 0 20px 20px !important;
+	-webkit-box-shadow: 2px 11px 26px -2px rgba(0,0,0,0.67) !important;
+	box-shadow: 2px 11px 26px -2px rgba(0,0,0,0.67) !important;
+	max-height: 30rem !important;
+}
 .image-description {
 	padding: 3rem 5rem;
 	font-size: 1.2rem;
+	text-align: justify;
 }
 .button-shadow {
 	-webkit-box-shadow: 2px 11px 26px -2px rgba(0,0,0,0.67); 
