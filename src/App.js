@@ -12,7 +12,7 @@ export default function App(){
 	"Hello, my name is Sławomir Sojka 👨‍🎓, I come from Poland 🇵🇱 , and I am a Student in Szybinski's Secondary School, with specialization in Programming 💻",
 	"In the start of the first week we had workshops ✍🏻 about the soft skills as well as how to introduce ourselves durign the job interview 💼 . Later in the week we've started the HTML/CSS course, after which we were developing website application 🔧 ",
 	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum.",
-	"On Sunday, after the morning lessons, we went on a trip to Leipzig, were we had a guided tour. We walked and saw the Market Square, the Old City Hall, as well as the Augusteum and the Church of St. Nicolas.",
+	"On Sunday, after the morning lessons 📚, we went on a trip 🚃 to Leipzig, were we had a guided tour. We walked and saw the Market Square, the Old City Hall, as well as the Augusteum and the Church of St. Nicolas.",
 	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum.",
 	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum."
 	]
