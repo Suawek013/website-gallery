@@ -9,18 +9,18 @@ import SimpleImageSlider from "react-simple-image-slider";
 export default function App(){
 
 	const descriptions = [
-	"Hello, my name is Sławomir Sojka 👨‍🎓, I come from Poland 🇵🇱 , and I am a Student in Szybinski's Secondary School, with specialization in Programming 💻",
-	"In the start of the first week we had workshops ✍🏻 about the soft skills as well as how to introduce ourselves durign the job interview 💼 . Later in the week we've started the HTML/CSS course, after which we were developing website application 🔧 ",
+	"Hello, my name is Sławomir Sojka 👨‍🎓, I come from Poland 🇵🇱 , and I am a Student in Szybinski's Secondary School, with specialization in Programming 💻 . I took a part in the Erasmus Project 🇪🇺 to Gut Wehlitz in order to gain new skills, meet new people and get to know German 🇩🇪 culture in general!",
+	"In the start of the first week we had workshops ✍🏻 about the soft skills as well as how to introduce ourselves durign the job interview 💼 .Later in the week we've started the HTML/CSS course, after which we were developing website application 🔧 ",
 	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum.",
-	"On Sunday, after the morning lessons 📚, we went on a trip 🚃 to Leipzig, were we had a guided tour. We walked and saw the Market Square, the Old City Hall, as well as the Augusteum and the Church of St. Nicolas.",
+	"On Sunday, after the morning lessons 📚, we went on a trip 🚃 to Leipzig, were we had a guided tour. We walked and saw the Market Square, the Old City Hall, as well as the Augusteum and the Church of St. Nicolas ⛪",
 	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum.",
-	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum."
+	"Work usually ends at 3pm ⏰ , so we spent all the rest of the time doing activities like swimming, playing volleyball 🏐 , going downtown or visiting the club and playing board games! 🎲"
 	]
 
 	const [description, setDescription] = useState(0)
-	const [images, setImages] = useState([{ url: "images/unsamples/1.jpg" },
-		{ url: "images/unsamples/2.jpg" },
-		{ url: "images/unsamples/3.jpg" },])
+	const [images, setImages] = useState([{ url: "images/home/1.jpg" },
+		{ url: "images/home/2.jpg" },
+		{ url: "images/home/3.jpg" },])
 
 	const switchPage = (pageName,index) => {
 		setDescription(index);
@@ -59,10 +59,10 @@ export default function App(){
 			</header>
 			<main>
 				<div className="image-container">
-					{description == 0 && 
-						<img src={`/images/home/1.jpg`} alt={`friends`}></img>
-					}
-					{description != 0 && 
+					{/* {description == 0 &&  */}
+						{/* <img src={`/images/home/1.jpg`} alt={`friends`}></img> */}
+					{/* } */}
+					{/* {description != 0 &&  */}
 						<SimpleImageSlider
 							className="slideshow"
 							autoPlay={true}
@@ -72,7 +72,7 @@ export default function App(){
 							showBullets={true}
 							showNavs={true}
 						/>
-					}
+					{/* } */}
 				</div>
 				<div className="image-description">
 					<p>{descriptions[description]}</p>
